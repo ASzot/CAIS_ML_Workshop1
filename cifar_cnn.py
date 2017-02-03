@@ -71,6 +71,9 @@ def build_network():
 
 def load_network():
     (all_train_x, all_train_y), (all_test_x, all_test_y) = cifar10.load_data()
+
+    all_train_y = np_utils.to_categorical(all_train_y, classes_count)
+    all_test_y = np_utils.to_categorical(all_test_y, classes_count)
     model = load_model('models/cifar_cnn.h5')
     model.evaluate(all_test_x, all_test_y, verbose=1)
 
