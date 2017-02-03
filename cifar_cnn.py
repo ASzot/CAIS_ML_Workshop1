@@ -64,3 +64,4 @@ print 'Accuracy: %.2f%%' % (score[1])
 
 model.save('models/cifar_cnn.h5')
 print 'Model was saved'
+

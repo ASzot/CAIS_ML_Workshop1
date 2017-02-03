@@ -53,3 +53,4 @@ model.fit(all_train_x, all_train_y, batch_size=batch_size,
 score = model.evaluate(all_test_x, all_test_y, verbose=1)
 
 print 'Accuracy: %.2f%%' % (score[1])
+
